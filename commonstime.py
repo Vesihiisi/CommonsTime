@@ -56,8 +56,8 @@ def tweet_it(pg, tme):
         f.write(fle.content)
     status = "🕰️ It's {} on #WikimediaCommons!\r\n\r\n".format(tme)
     status += full_url
-    # api.update_status(status)
-    # api.update_with_media(fname, status)
+    api.update_status(status)
+    api.update_with_media(fname, status)
     print(status)
     os.remove(fname)
 
